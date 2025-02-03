@@ -1,11 +1,12 @@
 import './App.css'
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
 
   return (
-    <>
-    <div>WELCOME TO ECOM</div>
-    </>
+    <div>
+    <Navbar />
+    </div>
   )
 }
 
