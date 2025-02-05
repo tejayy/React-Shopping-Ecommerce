@@ -1,14 +1,14 @@
-*{
+* {
   margin: 0;
 }
 
 body {
   margin: 0;
-  --webkit-font-smoothing: antialiased,
-  --moz-osx-font-smoothing: grayscale,
-  font-family: "Poppins";
+  font-family: "Poppins", serif;
+  --webkit-font-smoothing: antialiased;
+  --moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo,Monaco, Consolas, 'Courier New', Courier, monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", Courier, monospace;
 }
