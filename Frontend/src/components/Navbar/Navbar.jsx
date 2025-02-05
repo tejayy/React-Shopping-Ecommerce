@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import Logo from "../assets/logo.png";
 import cart_icon from "../assets/cart_icon.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
@@ -16,28 +17,36 @@ const Navbar = () => {
           onClick={() => {
             setMenu("shop");
           }}>
-          <Link to="/">Shop</Link>
+          <Link style={{ textDecoration: "none" }} to="/">
+            Shop
+          </Link>
           {menu === "shop" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
             setMenu("mens");
           }}>
-          <Link to="/mens">Men</Link>
+          <Link style={{ textDecoration: "none" }} to="/mens">
+            Men
+          </Link>
           {menu === "mens" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
             setMenu("womens");
           }}>
-          <Link to="/womens">Women</Link>
+          <Link style={{ textDecoration: "none" }} to="/womens">
+            Women
+          </Link>
           {menu === "womens" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
             setMenu("kids");
           }}>
-          <Link to="kids">Kids</Link>
+          <Link style={{ textDecoration: "none" }} to="kids">
+            Kids
+          </Link>
           {menu === "kids" ? <hr /> : <></>}
         </li>
       </ul>
