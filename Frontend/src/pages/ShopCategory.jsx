@@ -3,8 +3,9 @@ import "./CSS/ShopCategory.css";
 import {ShopContext} from "../Context/ShopContext";
 import dropdown_icon from "../components/assets/dropdown_icon.png";
 import Item from "../components/Item/Item";
-const ShopCatagories = (props) => {
+const ShopCategories = (props) => {
   const {all_product} = useContext(ShopContext);
+
   return (
     <div className="shop-category">
       <img src={props.banner} alt="" />
@@ -12,12 +13,18 @@ const ShopCatagories = (props) => {
         <p>
           <span>Showing 1-12</span> out of 36 products
         </p>
-        <div className="shocategory-sort">
+        <div className="shopcategory-sort">
           Sort by <img src={dropdown_icon} alt="" />
         </div>
       </div>
-      <div className="shocategory-products">
+      <div className="shopcategory-products">
         {all_product.map((item, i) => {
+          console.log(
+            "props.category:",
+            props.category,
+            "| item.category:",
+            item.category
+          );
           if (props.category === item.category) {
             return (
               <Item
@@ -38,4 +45,4 @@ const ShopCatagories = (props) => {
   );
 };
 
-export default ShopCatagories;
+export default ShopCategories;
